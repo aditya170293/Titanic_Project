@@ -1,1 +1,25 @@
-Test
+SELECT TOP (1000) [Operator]
+      ,[wellID]
+      ,[wellAPIUWI]
+      ,[MD]
+      ,[WellID_depthkey]
+      ,[depthkey]
+      ,[zonekey]
+      ,[bhakey]
+      ,[wellmarkerkey]
+      ,[Drill_Mode]
+      ,[AutoSlide_Active_New]
+      ,[Recorded]
+      ,[HDSCreateDateTime]
+      ,[HDSExpireDateTime]
+      ,[Data_source]
+      ,[Foot]
+      ,[helixEngine_tag]
+      ,[TD_Date]
+      ,[Produced_AutoSlide_Active]
+      ,[tour]
+      ,[xref_version_no]
+  FROM [bgsHDS].[t].[bgsxref]
+  where wellAPIUWI = '42365386620000'
+  and [MD] > 18000
+  and Foot = 1
